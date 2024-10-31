@@ -1,7 +1,9 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateCacheConfig, CACHE_NAME, CACHE_MECHANISM, COOKIE_EXPIRY,
-  COOKIE_ATTRIBUTES, TranslateCacheSettings } from './ngx-translate-cache.service';
+import {
+  TranslateCacheConfig, CACHE_NAME, CACHE_MECHANISM, COOKIE_EXPIRY,
+  COOKIE_ATTRIBUTES, TranslateCacheSettings
+} from './angular-translate-cache.service';
 
 @NgModule({
   imports: [

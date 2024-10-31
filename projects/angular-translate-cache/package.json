@@ -1,0 +1,27 @@
+{
+  "name": "angular-translate-cache",
+  "version": "18.0.0",
+  "description": "angular-translate extension to facilitate language cache.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bazobehram/angular-translate-cache"
+  },
+  "author": {
+    "name": "Behram Bazo",
+    "email": "bazobehram@hotmail.com"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "ng2-translate",
+    "ngx-translate",
+    "angular-translate",
+    "translate",
+    "translation",
+    "i18n"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bazobehram/angular-translate-cache/issues"
+  }
+}

@@ -1,4 +1,4 @@
-# ngx-translate-cache
+# angular-translate-cache
 [![NPM version][npm-version-image]][npm-url]
 [![MIT License][license-image]][license-url]
 
@@ -25,14 +25,14 @@ This extension is aimed only to facilitate language cache with *ngx-translate*.
 To install this library, run:
 
 ```bash
-$ npm install ngx-translate-cache --save
+$ npm install angular-translate-cache --save
 ```
 
 ## Usage
 
 ```typescript
     import { TranslateModule, TranslateService } from '@ngx-translate/core';
-    import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'ngx-translate-cache';
+    import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'angular-translate-cache';
 
     @NgModule({
         imports: [
@@ -59,7 +59,7 @@ or [Ionic][ionic-url], you must use an exported function instead of an inline fu
 
 ```ts
     import { TranslateModule, TranslateService } from '@ngx-translate/core';
-    import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'ngx-translate-cache';
+    import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'angular-translate-cache';
 
     export function TranslateCacheFactory(translateService, translateCacheSettings) {
       return new TranslateCacheService(translateService, translateCacheSettings);
@@ -104,12 +104,12 @@ To initialize *ngx-translate* you usually do
     }
 ```
 
-To initialize *ngx-translate* with *ngx-translate-cache*
+To initialize *ngx-translate* with *angular-translate-cache*
 
 ```typescript
     import { Component } from '@angular/core';
     import { TranslateService } from '@ngx-translate/core';
-    import { TranslateCacheService } from 'ngx-translate-cache';
+    import { TranslateCacheService } from 'angular-translate-cache';
 
     @Component({
         selector: 'app',
@@ -142,7 +142,7 @@ cookie duration (defined in hours).
 
 ```typescript
     import { TranslateModule, TranslateService } from '@ngx-translate/core';
-    import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'ngx-translate-cache';
+    import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'angular-translate-cache';
 
     @NgModule({
         imports: [
@@ -170,8 +170,8 @@ cookie duration (defined in hours).
 
 MIT © [Jaime](mailto:jaime.glez.pacheco@gmail.com)
 
-[npm-url]: https://www.npmjs.com/package/ngx-translate-cache
-[npm-version-image]: https://badge.fury.io/js/ngx-translate-cache.svg
+[npm-url]: https://www.npmjs.com/package/angular-translate-cache
+[npm-version-image]: https://badge.fury.io/js/angular-translate-cache.svg
 
 [license-image]: https://img.shields.io/npm/l/express.svg?style=flat
 [license-url]: LICENSE

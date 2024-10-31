@@ -3,20 +3,20 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-translate-cache": {
+    "angular-translate-cache": {
       "projectType": "library",
-      "root": "projects/ngx-translate-cache",
-      "sourceRoot": "projects/ngx-translate-cache/src",
+      "root": "projects/angular-translate-cache",
+      "sourceRoot": "projects/angular-translate-cache/src",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ngx-translate-cache/tsconfig.lib.json",
-            "project": "projects/ngx-translate-cache/ng-package.json"
+            "tsConfig": "projects/angular-translate-cache/tsconfig.lib.json",
+            "project": "projects/angular-translate-cache/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-translate-cache/tsconfig.lib.prod.json"
+              "tsConfig": "projects/angular-translate-cache/tsconfig.lib.prod.json"
             },
             "development": {}
           },
@@ -25,17 +25,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-translate-cache/src/test.ts",
-            "tsConfig": "projects/ngx-translate-cache/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-translate-cache/karma.conf.js"
+            "main": "projects/angular-translate-cache/src/test.ts",
+            "tsConfig": "projects/angular-translate-cache/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-translate-cache/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-translate-cache/tsconfig.lib.json",
-              "projects/ngx-translate-cache/tsconfig.spec.json"
+              "projects/angular-translate-cache/tsconfig.lib.json",
+              "projects/angular-translate-cache/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -44,37 +44,39 @@
         }
       }
     },
-    "ngx-translate-cache-example": {
+    "angular-translate-cache-example": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/ngx-translate-cache-example",
-      "sourceRoot": "projects/ngx-translate-cache-example/src",
+      "root": "projects/angular-translate-cache-example",
+      "sourceRoot": "projects/angular-translate-cache-example/src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ngx-translate-cache-example",
-            "index": "projects/ngx-translate-cache-example/src/index.html",
-            "main": "projects/ngx-translate-cache-example/src/main.ts",
+            "outputPath": {
+              "base": "dist/angular-translate-cache-example"
+            },
+            "index": "projects/angular-translate-cache-example/src/index.html",
             "polyfills": ["zone.js"],
-            "tsConfig": "projects/ngx-translate-cache-example/tsconfig.app.json",
+            "tsConfig": "projects/angular-translate-cache-example/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/ngx-translate-cache-example/src/favicon.ico",
-              "projects/ngx-translate-cache-example/src/assets"
+              "projects/angular-translate-cache-example/src/favicon.ico",
+              "projects/angular-translate-cache-example/src/assets"
             ],
             "styles": [
-              "projects/ngx-translate-cache-example/src/styles.css"
+              "projects/angular-translate-cache-example/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "browser": "projects/angular-translate-cache-example/src/main.ts"
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ngx-translate-cache-example/src/environments/environment.ts",
-                  "with": "projects/ngx-translate-cache-example/src/environments/environment.prod.ts"
+                  "replace": "projects/angular-translate-cache-example/src/environments/environment.ts",
+                  "with": "projects/angular-translate-cache-example/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -83,8 +85,6 @@
               "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -108,10 +108,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "ngx-translate-cache-example:build:production"
+              "buildTarget": "angular-translate-cache-example:build:production"
             },
             "development": {
-              "buildTarget": "ngx-translate-cache-example:build:development"
+              "buildTarget": "angular-translate-cache-example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -119,22 +119,22 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ngx-translate-cache-example:build"
+            "buildTarget": "angular-translate-cache-example:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-translate-cache-example/src/test.ts",
+            "main": "projects/angular-translate-cache-example/src/test.ts",
             "polyfills": ["zone.js"],
-            "tsConfig": "projects/ngx-translate-cache-example/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-translate-cache-example/karma.conf.js",
+            "tsConfig": "projects/angular-translate-cache-example/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-translate-cache-example/karma.conf.js",
             "assets": [
-              "projects/ngx-translate-cache-example/src/favicon.ico",
-              "projects/ngx-translate-cache-example/src/assets"
+              "projects/angular-translate-cache-example/src/favicon.ico",
+              "projects/angular-translate-cache-example/src/assets"
             ],
             "styles": [
-              "projects/ngx-translate-cache-example/src/styles.css"
+              "projects/angular-translate-cache-example/src/styles.css"
             ],
             "scripts": []
           }
@@ -143,9 +143,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-translate-cache-example/tsconfig.app.json",
-              "projects/ngx-translate-cache-example/tsconfig.spec.json",
-              "projects/ngx-translate-cache-example/e2e/tsconfig.json"
+              "projects/angular-translate-cache-example/tsconfig.app.json",
+              "projects/angular-translate-cache-example/tsconfig.spec.json",
+              "projects/angular-translate-cache-example/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -155,19 +155,22 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/ngx-translate-cache-example/e2e/protractor.conf.js"
+            "protractorConfig": "projects/angular-translate-cache-example/e2e/protractor.conf.js"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-translate-cache-example:serve:production"
+              "devServerTarget": "angular-translate-cache-example:serve:production"
             },
             "development": {
-              "devServerTarget": "ngx-translate-cache-example:serve:development"
+              "devServerTarget": "angular-translate-cache-example:serve:development"
             }
           },
           "defaultConfiguration": "development"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "589d813f-dabc-4282-9840-ef8a99150c5e"
   }
 }

@@ -4,21 +4,21 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "esModuleInterop": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "es2020",
+    "module": "ES2022",
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
     "lib": [
-      "es2018",
+      "ES2022",
       "dom"
     ],
     "paths": {
-      "ngx-translate-cache": [
-        "dist/ngx-translate-cache/ngx-translate-cache",
-        "dist/ngx-translate-cache"
+      "angular-translate-cache": [
+        "dist/angular-translate-cache/angular-translate-cache",
+        "dist/angular-translate-cache"
       ]
     },
     "useDefineForClassFields": false
